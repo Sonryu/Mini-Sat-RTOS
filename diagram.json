@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "author": "Renan Aquino",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -21.92, "left": -52.8, "attrs": {} },
+    {
+      "type": "board-bmp180",
+      "id": "bmp1",
+      "top": -114.04,
+      "left": 71.46,
+      "rotate": 90,
+      "attrs": { "temperature": "53.4", "pressure": "89750" }
+    },
+    {
+      "type": "wokwi-mpu6050",
+      "id": "imu1",
+      "top": -112.82,
+      "left": 146.08,
+      "rotate": 180,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "bmp1:SCL", "esp:D22", "green", [ "v0" ] ],
+    [ "bmp1:SDA", "esp:D21", "gold", [ "v0" ] ],
+    [ "imu1:SCL", "esp:D22", "green", [ "v0" ] ],
+    [ "imu1:SDA", "esp:D21", "gold", [ "v0" ] ],
+    [ "bmp1:VCC", "esp:3V3", "red", [ "v9.6", "h-182.4", "v57.6" ] ],
+    [ "bmp1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "bmp1:SCL", "esp:22", "gold", [ "v0" ] ],
+    [ "bmp1:SDA", "esp:21", "green", [ "v0" ] ],
+    [ "imu1:VCC", "esp:3V3", "red", [ "v9.6", "h-211.28", "v48" ] ],
+    [ "imu1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "imu1:SCL", "esp:22", "gold", [ "v0" ] ],
+    [ "imu1:SDA", "esp:21", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

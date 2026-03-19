@@ -102,7 +102,7 @@ void taskTelemetry(void *pvParameters) {
             Serial.println("---------------------------\n");
         }
 
-        // Taxa de exibição de 10Hz (100ms)
+        // Taxa de exibição de 10Hz&&langs_count=8langs_count=8 (100ms)
         vTaskDelay(pdMS_TO_TICKS(100));
     }
 }

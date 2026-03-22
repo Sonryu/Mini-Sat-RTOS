@@ -1,3 +1,12 @@
+/*
+ * Copyright (C) 2026 Ramon Watson de Lima Vilar
+ * * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License.
+ */
+
+// ||--------||--------||--------||--------||--------||--------||--------||--------||
+
 /* 
 Código-base para o Projeto 2 - Mini Satélite em Tempo Real.
 Usem ele para transformar de um código sequencial (super loop) para uma arquitetura multitarefas 

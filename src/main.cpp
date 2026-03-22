@@ -148,8 +148,7 @@ vTaskDelete(NULL);
         xQueueSend(sensor_queue, &currentData, 0);
 
         
-        // Taxa de exibição de 10Hz&&langs_count=8langs_count=8 (100ms)
-        vTaskDelay(pdMS_TO_TICKS(100));}      
+       vTaskDelayUntil(&xLastWakeTime, xFrequency);     
 
     }
 
